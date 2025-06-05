@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grid, Flexbox, and Sidebar Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar (Flexbox) */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+    }
+
+    /* Sidebar + Main Layout (Flexbox) */
+    .layout {
+      display: flex;
+      height: calc(100vh - 50px); /* Full height minus navbar */
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 200px;
+      background-color: #222;
+      padding: 20px;
+      color: white;
+    }
+
+    .sidebar a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 10px 0;
+    }
+
+    /* Grid Content */
+    .main-content {
+      flex: 1;
+      padding: 20px;
+      background-color: #f2f2f2;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .grid-item {
+      background-color: #276b8d;
+      color: white;
+      padding: 20px;
+      text-align: left;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo"><a href="#">MySite</a></div>
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+
+  <!-- Sidebar + Content Layout -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h3>Sidebar</h3>
+      
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <h2>Flexbox Cards</h2>
+      <div class="grid-container">
+        <div class="grid-item">Box 1</div>
+        <div class="grid-item">Box 2</div>
+        <div class="grid-item">Box 3</div>
+        <div class="grid-item">Box 4</div>
+        
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
